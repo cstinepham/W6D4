@@ -26,5 +26,17 @@ DOMNodeCollection.prototype.append = function (el) {
   }
 };
 
+DOMNodeCollection.prototype.attr = function(id, value){
+  if(value === undefined) {
+    return this.htmlElements[0].getAttribute(id);
+  } else {
+    for (var i = 0; i < this.htmlElements.length; i++) {
+      this.htmlElements[i].setAttribute(id, value);
+    }
+  }
+};
+
+
+
 
 module.exports = DOMNodeCollection;
