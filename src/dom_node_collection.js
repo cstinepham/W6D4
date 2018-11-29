@@ -36,6 +36,16 @@ DOMNodeCollection.prototype.attr = function(id, value){
   }
 };
 
+DOMNodeCollection.prototype.addClass = function(className) {
+  this.attr('class', className);
+};
+
+DOMNodeCollection.prototype.removeClass = function() {
+  for (var i = 0; i < this.htmlElements.length; i++) {
+    this.htmlElements[i].removeAttribute("class");
+  }
+};
+
 
 
 
