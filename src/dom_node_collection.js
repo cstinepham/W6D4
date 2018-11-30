@@ -1,6 +1,7 @@
 class DOMNodeCollection {
-  constructor(htmlElements) {
+  constructor(htmlElements, nodeList) {
     this.htmlElements = htmlElements;
+    this.nodeList = nodeList;
   }
 }
 
@@ -46,6 +47,17 @@ DOMNodeCollection.prototype.removeClass = function() {
   }
 };
 
+DOMNodeCollection.prototype.children = function () {
+  let children = [];
+  for (var i = 0; i < this.htmlElements.length; i++) {
+  
+  }
+  return new DOMNodeCollection(children);
+};
+
+DOMNodeCollection.prototype.index = function(array, index) {
+  return array[index];
+};
 
 
 
